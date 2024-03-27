@@ -2,16 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best sellers</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best sellers</title>
 </head>
 
 <body>
-    <h1>Best sellers</h1>
-    <div>
-      <%= inputChoices.results[0].list_name %> 
-    </div>
+  <h1>Best sellers</h1>
+  <div>
+    <form>
+      <select>
+        <% inputChoices.results.forEach(element => { %>
+          <option value="<%= element.list_name %>"><%= element.list_name %></option>
+    <% }) %>
+      </select>
+      <button>Get List!</button>
+    </form>
+  </div>
 </body>
 
 </html>
