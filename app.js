@@ -10,10 +10,8 @@ const {errorHandler} = require('./middleware/errorMiddleware');
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-
-// app.get('/', (req, res ) => {
-//     res.status(200).json({message: 'OK'});
-// });
+//set up public directory for css
+app.use(express.static(path.join(__dirname, '/public')));
 
 //set EJS as the view engine and specify the view directory.
 const viewsDirectory = path.join(__dirname, 'views');

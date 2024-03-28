@@ -10,8 +10,8 @@
 <body>
   <h1>Best sellers</h1>
   <div>
-    <form>
-      <select>
+    <form action="'/" method="post">
+      <select id="category" name="category">
         <% inputChoices.results.forEach(element => { %>
           <option value="<%= element.list_name %>"><%= element.list_name %></option>
     <% }) %>

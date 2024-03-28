@@ -10,7 +10,11 @@ const getInputChoices = asyncHandler(async (req, res) => {
 });
 
 const bestSellerList = asyncHandler(async (req, res) => {
-    res.status(200).json({message: 'ok'});
+    const list = encodeURIComponent(req.body.category);
+    console.log(list);
+   const bestList = await fetch(`https://api.nytimes.com/svc/books/v3/lists/current/${list}.json?&api-key=${process.env.API_KEY}`);
+   const bookList = await bestList.json();
+   res.render('bestSeller', {bookList});
 });
 
 module.exports = {
