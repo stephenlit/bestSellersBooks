@@ -6,10 +6,6 @@
 
 body {
   font-family: "Dancing Script", cursive;
-  background-image: url("./images/books.jpg");
-  background-position: bottom left;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100vw;
   height: 100svh;
 }
@@ -41,9 +37,11 @@ header {
 .cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .card {
-  max-width: 25%;
+  max-width: 10rem;
+  min-width: 18%;
   min-height: 12rem;
   margin: 1rem;
   padding: 0;
@@ -148,6 +146,11 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  background-image: url("./images/books.jpg");
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100svh;
 }
 
 .c {
@@ -157,4 +160,6 @@ header {
 .b {
   grid-area: 1 / 1 / 2 / 2;
   justify-content: center;
+  margin-top: 10%;
+  font-size: 2rem;
 }

@@ -9,9 +9,6 @@
 </head>
 <body>
     <div class="a">
-        <div class="b">
-            B
-        </div>
         <div class="c">
             C
       <main>
@@ -19,7 +16,7 @@
           <h2>Search Best Seller List</h2>
           <!-- This is for the form that lets you pick a category -->
         </section>
-        <section class="cards">
+       <!-- <section class="cards">
           <div class="card">
             <h4 class="roboto-bold">The Sword Of Truth</h4>
             <div class="book_image">
@@ -39,7 +36,18 @@
             </div>
           </div>
 
-        </section>
+        </section> -->
+
+  <div>
+    <form action="'/" method="post">
+      <select id="category" name="category">
+        <% inputChoices.results.forEach(element => { %>
+          <option value="<%= element.list_name %>"><%= element.list_name %></option>
+    <% }) %>
+      </select>
+      <button>Get List!</button>
+    </form>
+  </div>
       </main>
         </div>
     </div>
