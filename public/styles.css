@@ -1,160 +1,197 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Dancing Script", cursive;
-  background-image: url("./images/books.jpg");
-  background-position: bottom left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100svh;
+    font-family: 'Dancing Script', cursive;
+
+    width: 100vw;
+    height: 100svh;
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: (1fr, 1fr);
-  grid-template-rows: 1fr;
-  margin-top: 10%;
-  width: 100%;
-  float: right;
-  margin-right: 2rem;
+    display: grid;
+    grid-template-areas: ' space content';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-image: url('./images/books.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100dvh;
+}
+
+main {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 100%; 
+}
+
+main h1 {
+    font-size: calc(2vw + 2vw + 2vw);
+    font-weight: bolder;
+}
+
+main p {
+    font-size: calc(1vw + 1vw + 1vw);
+}
+
+.tag_line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 6rem 0;
+}
+
+.search_input {
+    display: flex;
+    justify-content: center;
 }
 
 nav {
-  width: 100%;
-  height: 4rem;
+    width: 100%;
+    height: 4rem;
 }
 
 header {
-  font-size: 1.5rem;
-  font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .cards {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .card {
-  max-width: 25%;
-  min-height: 12rem;
-  margin: 1rem;
-  padding: 0;
-  background: white;
-  border-radius: 1rem;
+    max-width: 25%;
+    min-height: 12rem;
+    margin: 1rem;
+    padding: 0;
+    background: white;
+    border-radius: 1rem;
 }
 
 .card h4 {
-  text-align: center;
-  margin: 0.5rem 0 0.5rem 0;
-  color: black;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+    color: black;
 }
 
 .search_form {
-  text-align: center;
-  padding: 2rem;
+    text-align: center;
+    padding: 2rem;
 }
 
 .book_heading {
-  font-size: 1rem;
-  padding: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0.5rem 0;
 }
 
 .book_image img {
-  border-radius: 1rem;
+    border-radius: 1rem;
 }
 
 /* ========== fonts ============*/
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
+/*/ <uniquifier>: Use a unique and descriptive class name */
+/*/ <weight>: Use a value from 400 to 700 */
+
+.dancing-script-bold {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
+}
+
+.roboto-thin {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 .roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
 }
 
 .roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
 }
 
 .a {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
 }
 
 .c {
-  grid-area: 1 / 2 / NaN / NaN;
-  justify-content: center;
+    grid-area: 1 / 2 / NaN / NaN;
+    justify-content: center;
 }
 .b {
-  grid-area: 1 / 1 / 2 / 2;
-  justify-content: center;
+    grid-area: 1 / 1 / 2 / 2;
+    justify-content: center;
 }
