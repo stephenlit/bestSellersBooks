@@ -23,16 +23,9 @@
         <p>Best Sellers Books List</p>
       </div>
       <div class="search_input">
-        <form action="'/" method="post">
-          <select id="category" name="category">
-            <option selected>Select a Category</option>
-            <% inputChoices.results.forEach(element=> { %>
-              <option value="<%= element.list_name %>">
-                <%= element.list_name %>
-              </option>
-              <% }) %>
-          </select>
-        </form>
+        <% data.results.forEach(book => { %>
+         <a href="#">Book category type</a>
+        <% }) %>
       </div>
     </main>
   </div>
