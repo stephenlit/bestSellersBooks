@@ -1,11 +1,16 @@
+<form action="'/" method="post">
+  <select id="category" name="category">
+    <option selected>Select a Category</option>
+    <% inputChoices.results.forEach(element=> { %>
+      <option value="<%= element.list_name %>">
+        <%= element.list_name %>
+      </option>
+      <% }) %>
+  </select>
+</form>
 
-        <form action="'/" method="post">
-          <select id="category" name="category">
-            <option selected>Select a Category</option>
-            <% inputChoices.results.forEach(element=> { %>
-              <option value="<%= element.list_name %>">
-                <%= element.list_name %>
-              </option>
-              <% }) %>
-          </select>
-        </form>
+<% inputChoices.results.forEach(book=> { %>
+  <div class='box'><a href="<%= book.list_name %>">
+      <%= book.list_name %>
+    </a></div>
+  <% }) %>

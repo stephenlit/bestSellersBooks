@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
         /* Styling for the slider container and links */
         .slider-container {
             overflow: hidden;
-            width: 300px; /* Adjust as needed */
-            position: relative; /* Required for absolute positioning of links */
+            width: 300px;
+            /* Adjust as needed */
+            position: relative;
+            /* Required for absolute positioning of links */
         }
 
         .slider-links {
@@ -19,25 +22,33 @@
         }
 
         .slider-links a {
-            margin-bottom: 10px; /* Adjust spacing between links */
+            margin-bottom: 10px;
+            /* Adjust spacing between links */
             display: block;
             text-decoration: none;
-            color: blue; /* Adjust link color */
+            color: blue;
+            /* Adjust link color */
             position: absolute;
-            right: -100%; /* Initially position links off the right side of the container */
-            animation: slideIn 1s forwards; /* Animation to slide in from right */
+            right: -100%;
+            /* Initially position links off the right side of the container */
+            animation: slideIn 1s forwards;
+            /* Animation to slide in from right */
         }
 
         @keyframes slideIn {
             from {
-                right: -100%; /* Start position */
+                right: -100%;
+                /* Start position */
             }
+
             to {
-                right: 0; /* End position */
+                right: 0;
+                /* End position */
             }
         }
     </style>
 </head>
+
 <body>
     <div class="slider-container">
         <div class="slider-links"></div>
@@ -61,5 +72,5 @@
             .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
-</html>
 
+</html>
