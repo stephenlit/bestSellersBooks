@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best sellers</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <!-- <link
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best sellers</title>
@@ -14,6 +22,22 @@
         rel="stylesheet"> -->
 </head>
 
+<body>
+
+  <div class="wrapper">
+    <main>
+      <h1>Best sellers Categories</h1>
+      <div class="container">
+        <div class="search_input">
+          <% inputChoices.results.forEach(book => { %>
+          <div class='box'><a href="#"><%= book.list_name %></a></div>
+          <% }) %>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/index.js"></script>
 <bo700 <div class="wrapper">
     <main>
         <div class="tag_line">

@@ -32,13 +32,13 @@ button {
 .wrapper {
     display: grid;
     grid-template-areas: ' space content';
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 45% 55%;
     grid-template-rows: 1fr;
     background-image: url('./images/books.jpg');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100dvh;
+    max-height: 100dvh;
 }
 
 main {
@@ -47,6 +47,7 @@ main {
     flex-direction: column;
     margin: 6rem;
     height: 100%;
+    margin: 0 3rem 0 0;
 
 }
 
@@ -208,3 +209,27 @@ header {
     grid-area: 1 / 1 / 2 / 2;
     justify-content: center;
 }
+/* slider css transistion */
+
+.conatiner {
+    width: 100%;
+    overflow: hidden;
+}
+  
+  .box {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
