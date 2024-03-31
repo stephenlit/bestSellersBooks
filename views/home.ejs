@@ -21,11 +21,14 @@
       <h1>Best sellers Categories</h1>
       <div class="container">
         <div class="search_input">
-          <% inputChoices.results.forEach(book=> { %>
-            <div class='box'><a href="#">
-                <%= book.list_name %>
-              </a></div>
-            <% }) %>
+          <% console.log(inputChoices.results.length) %>
+            <% inputChoices.results.forEach(book=> {
+              %>
+              <div class='box'><a href="#">
+
+                  <%= book.list_name %>
+                </a></div>
+              <% }) %>
         </div>
       </div>
     </main>

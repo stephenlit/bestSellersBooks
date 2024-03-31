@@ -22,6 +22,11 @@ select {
     background: lightgreen;
 }
 
+a {
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
 button {
     padding: 1rem;
     background: lightgreen;
@@ -38,7 +43,7 @@ button {
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
-    max-height: 100dvh;
+    max-height: 100vh;
 }
 
 main {
@@ -48,7 +53,6 @@ main {
     margin: 6rem;
     height: 100%;
     margin: 0 3rem 0 0;
-
 }
 
 main h1 {
@@ -69,6 +73,10 @@ main p {
 }
 
 .search_input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 100vh;
     text-align: center;
 }
 
@@ -120,10 +128,10 @@ header {
 /*/ <weight>: Use a value from 400 to 700 */
 
 .dancing-script-bold {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Dancing Script', cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .roboto-thin {
@@ -215,21 +223,20 @@ header {
     width: 100%;
     overflow: hidden;
 }
-  
-  .box {
+
+.box {
     opacity: 0;
     transform: translateX(-100%);
     animation: slideIn 1s forwards;
-  }
-  
-  @keyframes slideIn {
+}
+
+@keyframes slideIn {
     0% {
-      opacity: 0;
-      transform: translateX(100%);
+        opacity: 0;
+        transform: translateX(100%);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
-  }
-  
+}

@@ -16,7 +16,7 @@
     const boxes = document.querySelectorAll(".box");
     for (let i = 0; i < boxes.length; i++) {
       const box = boxes[i];
-      box.style.setProperty("animation", `1s forwards ${i * 500}ms slideIn`);
+      box.style.setProperty("animation", `1s forwards ${i * 200}ms slideIn`);
   }
 }
 
