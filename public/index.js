@@ -1,6 +1,6 @@
 // document.addEventListener("DOMContentLoaded", function() {
 //     const boxes = document.querySelectorAll(".box");
-//     const delay = 500; 
+//     const delay = 500;
 //     for (const i = 0; i < boxes.length; i++) {
 //       (function(index) {
 //         setTimeout(function() {
@@ -10,16 +10,18 @@
 //       })(i);
 //     }
 //   });
-  
 
- function modifyAnimation() {
-    const boxes = document.querySelectorAll(".box");
+function modifyAnimation() {
+    const boxes = document.querySelectorAll('.box');
     for (let i = 0; i < boxes.length; i++) {
-      const box = boxes[i];
-      box.style.setProperty("animation", `1s forwards ${i * 200}ms slideIn`);
-  }
+        const box = boxes[i];
+        box.style.setProperty(
+            'animation',
+            `1s forwards ${i * 300}ms slideIn`
+        );
+    }
 }
 
-window.addEventListener("load", () => {
-  modifyAnimation();                    
-})
+window.addEventListener('load', () => {
+    modifyAnimation();
+});

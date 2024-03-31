@@ -19,15 +19,18 @@
   <div class="wrapper">
     <main>
       <h1>Best sellers Categories</h1>
+      <p>Select a category to see top 10 list</p>
       <div class="container">
         <div class="search_input">
           <% console.log(inputChoices.results.length) %>
             <% inputChoices.results.forEach(book=> {
               %>
-              <div class='box'><a href="#">
+              <div class="box">
+                <a href="<%= book.list_name %>">
 
                   <%= book.list_name %>
-                </a></div>
+                </a> <span class="dash"> | </span>
+              </div>
               <% }) %>
         </div>
       </div>
