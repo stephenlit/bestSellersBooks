@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Links Slider</title>
+    <style>
+        /* Styling for the slider container and links */
+        .slider-container {
+            overflow: hidden;
+            width: 300px; /* Adjust as needed */
+            position: relative; /* Required for absolute positioning of links */
+        }
+
+        .slider-links {
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-links a {
+            margin-bottom: 10px; /* Adjust spacing between links */
+            display: block;
+            text-decoration: none;
+            color: blue; /* Adjust link color */
+            position: absolute;
+            right: -100%; /* Initially position links off the right side of the container */
+            animation: slideIn 1s forwards; /* Animation to slide in from right */
+        }
+
+        @keyframes slideIn {
+            from {
+                right: -100%; /* Start position */
+            }
+            to {
+                right: 0; /* End position */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-links"></div>
+    </div>
+
+    <script>
+        // Fetch data from the API
+        fetch('https://api.nytimes.com/svc/books/v2/lists/names.json?q=&api-key=or7AsIetNoCUrSk50P34KYDAtmcTuO1P')
+            .then(response => response.json())
+            .then(data => {
+                const sliderContainer = document.querySelector('.slider-links');
+                // Iterate over the data and create links dynamically
+                data.results.forEach(item => {
+                    console.log(item.list_name);
+                    const link = document.createElement('a');
+                    link.href = item.list_name; // Assuming each item has a 'url' property
+                    link.textContent = item.list_name; // Assuming each item has a 'title' property
+                    sliderContainer.appendChild(link);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>
+

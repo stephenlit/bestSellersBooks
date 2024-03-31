@@ -20,18 +20,18 @@
     <main>
       <div class="tag_line">
         <h1 class="dancing-scrip-bold">New York Times</h1>
-        <p>Best Sellers Books List</p>
+        <p>Best Sellers List</p>
       </div>
       <div class="search_input">
         <form action="'/" method="post">
           <select id="category" name="category">
-            <option selected>Select a Category</option>
             <% inputChoices.results.forEach(element=> { %>
               <option value="<%= element.list_name %>">
                 <%= element.list_name %>
               </option>
               <% }) %>
           </select>
+          <button>Get List!</button>
         </form>
       </div>
     </main>

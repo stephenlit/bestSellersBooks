@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best sellers</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../public/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
@@ -14,23 +14,24 @@
         rel="stylesheet"> -->
 </head>
 
-<body>
-
-    <div class="wrapper">
-        <main>
-            <h1>Best sellers</h1>
-            <form action="'/" method="post">
-                <select id="category" name="category">
-                    <% inputChoices.results.forEach(element=> { %>
-                        <option value="<%= element.list_name %>">
-                            <%= element.list_name %>
-                        </option>
-                        <% }) %>
-                </select>
-                <button>Get List!</button>
-            </form>
-        </main>
-    </div>
+<bo700 <div class="wrapper">
+    <main>
+        <div class="tag_line">
+            <h1 class="dancing-scrip-bold">New York Times</h1>
+            <p>Best Sellers Books List</p>
+        </div>
+        <div class="search_inpu700
+        <form action="'/" method="post">
+          <select id="category" name="category">
+            <option selected>Select a Category</option>
+            <% inputChoices.results.forEach(element=> { %>
+              <option value="<%= element.list_name %>">
+                <%= element.list_name %>
+              </option>
+              <% }) %>
+          </select>
+        </form>
+      </div>
+    </main>
+  </div>
 </body>
-
-</html>
