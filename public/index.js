@@ -25,3 +25,6 @@ function modifyAnimation() {
 window.addEventListener('load', () => {
     modifyAnimation();
 });
+
+
+  
