@@ -7,6 +7,6 @@ const {
 } = require('../controllers/dataController');
 
 router.route('/').get(getInputChoices);
-router.route('/:id').post(bestSellerList);
+router.route('/booklist/:id').get(bestSellerList);
 
 module.exports = router;

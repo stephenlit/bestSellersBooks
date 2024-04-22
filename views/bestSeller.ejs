@@ -10,10 +10,20 @@
 
 <body>
     <main>
-        <h1>Best sellers list</h1>
-        <div class="card">
-            <img src="<%= bookList.results.books[0].book_image %>" alt="">
+        <h1>
+            <%= bookList.results.list_name %>
+        </h1>
+        <div class="card-container">
+            <% bookList.results.books.forEach((book)=> { %>
+
+                <div class="card">
+                    <img src="<%= book.book_image %>" alt="">
+                </div>
+
+
+                <% }); %>
         </div>
+
     </main>
 </body>
 

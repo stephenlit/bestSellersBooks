@@ -22,14 +22,15 @@
       <p>Select a category to see top 10</p>
       <div class="container">
         <div class="search_input">
-            <% inputChoices.results.forEach(book=> {
-              %>
-              
-                <a class="box" href="<%= book.list_name %>">
-                  <%= book.list_name %>
-                </a> 
-             
-              <% }) %>
+          <% filteredInputChoices.forEach(book=> {
+            const url = encodeURI(book.list_name);
+            %>
+
+            <a class="box" href="/booklist/<%=url %>">
+              <%= book.list_name %>
+            </a>
+
+            <% }) %>
         </div>
       </div>
     </main>
